@@ -1,2 +1,2 @@
 # web-stories
-Making a website to showcase some of my 
+Making a website to showcase some of my works
