@@ -8,8 +8,13 @@ h1 {
     color: #FFFFFF;
     padding: 10px 20px;
     border: none;
+    transition: background-color 0.3s ease;
     border-radius: 5px;
 }
+
+.my-CTA.btn:hover {
+    background-color: #4b0386 !important;
+  }
 
 .navbar {
     height: 50px; /* Adjust the height as desired */
@@ -42,6 +47,10 @@ h1 {
     margin-left: 10px;
     margin-right: 10px; 
     color: white;
+}
+
+.text-box {
+    margin-bottom: 20px;
 }
 
 /*.image-container {

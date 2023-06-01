@@ -30,9 +30,20 @@
     <div class="container">
         <h1>Welcome to Web Stories</h1>
 
-        <?php
-        echo "I will post some of my extensive works in this PHP-built website to practice coding out PHP objects.";
-        ?>
+        <div class="text-box">
+            <?php
+            echo "I will post some of my extensive works in this PHP-built website to practice coding out PHP objects.";
+           
+            // Read the contents of titles.json
+            $jsonData = file_get_contents('title.json');
+
+            // Decode the JSON data into a PHP array
+            $title = json_decode($jsonData, true);
+            
+            // Access the titles
+            echo "Title: " . $title . "<br>";
+            ?>
+        </div>
 
         <br>
         
