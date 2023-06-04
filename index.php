@@ -32,16 +32,23 @@
 
         <div class="text-box">
             <?php
-            echo "I will post some of my extensive works in this PHP-built website to practice coding out PHP objects.";
+            echo "I will post some of my extensive works in this PHP-built website to practice coding out PHP objects." . "<br>";
            
             // Read the contents of titles.json
-            $jsonData = file_get_contents('title.json');
+            $titleJson = file_get_contents('title.json');
+            $linesJson = file_get_contents('lines.json');
 
             // Decode the JSON data into a PHP array
-            $title = json_decode($jsonData, true);
+            $title = json_decode($titleJson, true);
+            $lines = json_decode($linesJson, true);
             
             // Access the titles
-            echo "Title: " . $title . "<br>";
+            echo "<br>" . "Title: " . $title . "<br>";
+
+            foreach ($lines as $line) {
+                echo $line . "<br>";
+            }
+
             ?>
         </div>
 
@@ -49,7 +56,7 @@
         
         <div class="row">
             <div class="col-sm-4">
-                <button class="btn btn-primary btn-lg btn-block my-CTA">Click Me</button>
+                <button class="btn btn-primary btn-lg btn-block my-CTA">Click Me For New Story</button>
             </div>
         </div>
     </div>
